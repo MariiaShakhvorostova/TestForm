@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Job</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="header">
+        <h2>NEW Create a job</h2>
+        <span class="close-btn" onclick="closeForm()">×</span>
+      </div>
+      <form id="jobForm">
+        <div class="form-row">
+          <div class="section">
+            <h3>Client details</h3>
+            <div class="first_last_name">
+              <input type="text" id="firstName" placeholder="First name" />
+              <input type="text" id="lastName" placeholder="Last name" />
+            </div>
+            <input type="text" id="phone" placeholder="Phone" />
+            <input type="email" id="email" placeholder="Email" />
+          </div>
+          <div class="section">
+            <h3>Job type</h3>
+            <select id="jobType">
+              <option value="">Select job type</option>
+              <option value="Type1">Type1</option>
+              <option value="Type2">Type2</option>
+              <option value="Type3">Type3</option>
+            </select>
+            <select id="jobSource">
+              <option value="">Select job source</option>
+              <option value="Source1">Source1</option>
+              <option value="Source2">Source2</option>
+              <option value="Source3">Source3</option>
+            </select>
+            <textarea
+              id="jobDescription"
+              placeholder="Job description (optional)"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="section">
+            <h3>Service location</h3>
+            <input type="text" id="address" placeholder="Address" />
+            <input type="text" id="city" placeholder="City" />
+            <input type="text" id="state" placeholder="State" />
+            <div class="index_zip">
+              <input type="text" id="index" placeholder="Index" />
+              <select id="zipCode">
+                <option value="">Select Area</option>
+                <option value="Tampa">Tampa</option>
+                <option value="Orlando">Orlando</option>
+                <option value="Miami">Miami</option>
+              </select>
+            </div>
+          </div>
+          <div class="section">
+            <h3>Scheduled</h3>
+            <input type="date" id="startDate" placeholder="mm/dd/yyyy" />
+            <div class="time-select">
+              <div class="start_end_time">
+                <select id="startTime">
+                  <option value="08:00">08:00</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                </select>
+                <select id="endTime">
+                  <option value="08:00">08:00</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                </select>
+              </div>
+            </div>
+            <select id="technician">
+              <option value="">Select technician</option>
+              <option value="Tech1">Tech1</option>
+              <option value="Tech2">Tech2</option>
+              <option value="Tech3">Tech3</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="button" id="createJobBtn" onclick="createJob()">
+            Create job
+          </button>
+          <button type="button" id="saveInfoBtn" onclick="saveInfo()">
+            Save info
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
